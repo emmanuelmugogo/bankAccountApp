@@ -1,18 +1,23 @@
+import java.math.BigDecimal;
 
 public class SavingsAccount extends BankAccount {
 	
-	private double balance;
 
-	public double getBalance() {
-		return balance;
+	public SavingsAccount(String clientName, String accountNumber, BigDecimal accountBalance, BigDecimal interestRate) {
+		super(clientName, accountNumber, accountBalance, interestRate);
+		// TODO Auto-generated constructor stub
 	}
-	
-	public void deposit(double depositAmount) {
-		balance += depositAmount;
+
+	@Override
+	public void update() {
+		// TODO Auto-generated method stub
+		
 	}
-	
-	public void withdraw (double withdrawAmount) {
-		balance -= withdrawAmount;
+
+	@Override
+	public void getAccountType() {
+		// TODO Auto-generated method stub
+		
 	}
 
 }
