@@ -4,8 +4,8 @@ public class CheckingAccount extends BankAccount {
 
 	public CheckingAccount(String clientName, String accountNumber, BigDecimal accountBalance,
 			BigDecimal interestRate) {
-		super(clientName, accountNumber, accountBalance, interestRate);
-		// TODO Auto-generated constructor stub
+		super(clientName, accountNumber, accountBalance, interestRate);s
+
 	}
 
 	@Override
@@ -15,11 +15,15 @@ public class CheckingAccount extends BankAccount {
 	}
 
 	@Override
-	public void getAccountType() {
+	public String getAccountType() {
 		// TODO Auto-generated method stub
-		
+		return null;
 	}
-	
-	
+
+	@Override
+	public BigDecimal getBalance() {
+		// TODO Auto-generated method stub
+		return null;
+	}
 
 }

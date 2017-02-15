@@ -1,7 +1,6 @@
 import java.math.BigDecimal;
 
 public class SavingsAccount extends BankAccount {
-	
 
 	public SavingsAccount(String clientName, String accountNumber, BigDecimal accountBalance, BigDecimal interestRate) {
 		super(clientName, accountNumber, accountBalance, interestRate);
@@ -15,9 +14,18 @@ public class SavingsAccount extends BankAccount {
 	}
 
 	@Override
-	public void getAccountType() {
+	public String getAccountType() {
 		// TODO Auto-generated method stub
-		
+		return null;
 	}
+
+	@Override
+	public BigDecimal getBalance() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+	
+
+
 
 }

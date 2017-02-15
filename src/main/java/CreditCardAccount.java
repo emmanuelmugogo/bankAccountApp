@@ -15,10 +15,18 @@ public class CreditCardAccount extends BankAccount {
 	}
 
 	@Override
-	public void getAccountType() {
+	public String getAccountType() {
 		// TODO Auto-generated method stub
-		
+		return null;
 	}
+
+	@Override
+	public BigDecimal getBalance() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	
 	
 	
 

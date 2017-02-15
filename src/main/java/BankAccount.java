@@ -2,10 +2,12 @@ import java.math.BigDecimal;
 
 abstract class BankAccount {
 	
-	private String clientName;
-	private String accountNumber;
-	private BigDecimal accountBalance;
-	private BigDecimal interestRate;
+	protected String clientName;
+	protected String accountNumber;
+	protected BigDecimal accountBalance;
+	protected BigDecimal interestRate;
+	
+	
 	
 	public BankAccount(String clientName, String accountNumber, BigDecimal accountBalance, BigDecimal interestRate) {
 		super();
@@ -15,23 +17,17 @@ abstract class BankAccount {
 		this.interestRate = interestRate;
 	}
 
-	public String getClientName() {
-		return clientName;
-	}
-
-	public String getAccountNumber() {
-		return accountNumber;
-	}
-
-	public BigDecimal getAccountBalance() {
-		return accountBalance;
-	}
-
-	public BigDecimal getInterestRate() {
-		return interestRate;
-	}
-	
 	public abstract void update();
 	
-	public abstract void getAccountType();
+	public abstract String getAccountType();
+	
+	public abstract BigDecimal getBalance();
+	
+	public void withDraw(BigDecimal withDrawAmount) {
+		accountBalance =  accountBalance.subtract(withDrawAmount);
+	}
+	
+	public void deposit(BigDecimal depositAmount) {
+		accountBalance = accountBalance.add(depositAmount);
+	}
 }
