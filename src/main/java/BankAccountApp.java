@@ -1,9 +1,27 @@
+import java.io.IOException;
 import java.math.BigDecimal;
+import java.net.URISyntaxException;
+import java.nio.file.Files;
+import java.nio.file.Path;
+import java.nio.file.Paths;
+import java.util.List;
 import java.util.Scanner;
 
-public class BankAccountApp {
 
-	public static void main(String[] args) {
+
+public class BankAccountApp {
+	
+	public static void main(String[] args) throws IOException, URISyntaxException {
+		
+//		 // get resource from classpath
+//        java.net.URL resource = ClassLoader.getSystemResource("quickfind/largeUF.txt");
+//        Path path = Paths.get(((java.net.URL) resource).toURI());
+//
+//        // read all lines
+//        List<String> allLines = Files.readAllLines(path);
+//
+//        // print all lines
+//        allLines.stream().forEach(System.out::println);
 		
 		BankAccount myChecking = new CheckingAccount("John", "00000Check", new BigDecimal("1000.00"), new BigDecimal("0.05"));
 		BankAccount mySaving = new SavingsAccount("Doe", "00000Saving", new BigDecimal("2000"), new BigDecimal("0.10"));
@@ -17,6 +35,7 @@ public class BankAccountApp {
 		int tries = 0;
 		int userChoice;
 		String mainMenu = "\t1 - View Balances \n\t2 - Deposit Funds \n\t3 - Withdraw Funds \n\t4 - Exit...";
+		
 		
 		System.out.println("\n*********************************"
 				+ "\nWELCOME TO THE BANK ACCOUNT APP"
@@ -135,6 +154,7 @@ public class BankAccountApp {
 		}else if (tries >= 3) {
 			System.out.println("\nYour Account Has been LOCKED \nplease call your Banker to fix this..!!");
 		}
+		
 	
 		scanner.close();
 	}

@@ -1,0 +1,7 @@
+This is test output
+
+*********************************
+WELCOME TO THE BANK ACCOUNT APP
+*********************************
+
+Please enter your PIN: 
