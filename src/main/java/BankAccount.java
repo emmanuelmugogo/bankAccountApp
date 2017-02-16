@@ -17,7 +17,7 @@ abstract class BankAccount {
 		this.interestRate = interestRate;
 	}
 
-	public abstract void update();
+	
 	
 	public abstract String getAccountType();
 	
@@ -29,5 +29,13 @@ abstract class BankAccount {
 	
 	public void deposit(BigDecimal depositAmount) {
 		accountBalance = accountBalance.add(depositAmount);
+	}
+	
+	public void update() {
+		BigDecimal interest = accountBalance.multiply(interestRate);
+		accountBalance = accountBalance.add(interest);
+		
+		//rounding the decimal
+		accountBalance = accountBalance.setScale(2, BigDecimal.ROUND_HALF_UP);
 	}
 }

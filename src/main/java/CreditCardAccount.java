@@ -5,26 +5,30 @@ public class CreditCardAccount extends BankAccount {
 	public CreditCardAccount(String clientName, String accountNumber, BigDecimal accountBalance,
 			BigDecimal interestRate) {
 		super(clientName, accountNumber, accountBalance, interestRate);
-		// TODO Auto-generated constructor stub
-	}
-
-	@Override
-	public void update() {
-		// TODO Auto-generated method stub
 		
 	}
 
+
 	@Override
 	public String getAccountType() {
-		// TODO Auto-generated method stub
-		return null;
+		return "Credit Card Account";
 	}
 
 	@Override
 	public BigDecimal getBalance() {
-		// TODO Auto-generated method stub
-		return null;
+		return accountBalance;
 	}
+
+
+	
+//	public void update() {
+//		BigDecimal interest = accountBalance.multiply(interestRate);
+//		accountBalance = accountBalance.add(interest);
+//		
+//		//rounding the decimal
+//		accountBalance = accountBalance.setScale(1, BigDecimal.ROUND_HALF_UP);
+//		
+//	}
 
 	
 	
